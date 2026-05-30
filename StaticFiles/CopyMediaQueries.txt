@@ -1,0 +1,50 @@
+﻿/*standard device styling (desktops larger than ipad)*/
+
+
+/*portrait screen overrides*/
+@Media (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*ipad landscape screen overrides*/
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape)
+{
+    /*unused*/
+}
+
+/*ipad portrait screen overrides*/
+@media (min-height: 1024px) and (max-height: 1366px) and (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*smaller than ipad landscape screen overrides*/
+@media (max-width: 1023px) and (orientation: landscape)
+{
+    /*unused*/
+}
+
+/*smaller than ipad portrait screen overrides*/
+@media (max-height: 1023px) and (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*safari browser overrides in portrait orientation*/
+@media (orientation: portrait)
+{
+    @supports (-webkit-touch-callout: none)
+    {
+        /*unused*/
+    }
+}
+
+/*safari browser overrides in landscape orientation*/
+@media (orientation: landscape)
+{
+    @supports (-webkit-touch-callout: none)
+    {
+        /*unused*/
+    }
+}

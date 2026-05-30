@@ -1,0 +1,297 @@
+/*standard device styling (desktops larger than ipad)*/
+.Scrollable
+{
+    width: var(--cdsp-full-width);
+    height: var(--cdsp-full-height);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    color: black;
+    scroll-snap-type: y mandatory;
+}
+.Box
+{
+    width: 100%;
+    height: var(--cdsp-full-height);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(20, 5%);
+    grid-template-columns: repeat(20, 5%);
+    scroll-snap-align: start;
+}
+#WelcomeBox
+{
+    background: linear-gradient(180deg, #222222, #bbbbbb);
+    color: ghostwhite;
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+}
+#Navbar, #Footer
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+#Navbar
+{
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 20;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: repeat(10, 10%);
+}
+#NavHeader
+{
+    font-size: var(--fs-xxl);
+    color: #bb2222;
+    grid-row: 2 / span 3;
+    grid-column: 1 / span 2;
+    margin-left: var(--sp-xs);
+    transition-duration: 0.25s;
+}
+#NavHeader:hover
+{
+    color: #992222;
+    transform: skewX(-15deg) scale(110%);
+}
+.NavButton
+{
+    padding: var(--sp-xs) var(--sp-md);
+    font-family: cursive;
+    font-size: var(--fs-sm);
+    background-color: #bb2222;
+    transition-duration: 0.25s;
+}
+.NavButton:hover
+{
+    background-color: #992222;
+    transform: skewX(-15deg) scale(110%);
+}
+#CreateRatingBtn
+{
+    grid-row: 2 / span 3;
+    grid-column: 7 / span 1;
+}
+#EditRatingBtn
+{
+    grid-row: 2 / span 3;
+    grid-column: 8 / span 1;
+}
+#ViewRatingBtn
+{
+    grid-row: 2 / span 3;
+    grid-column: 9 / span 1;
+}
+#WelcomeBoxHeader
+{
+    font-size: var(--fs-xxxl);
+    grid-row: 5 / span 3;
+    grid-column: 6 / span 10;
+}
+#WelcomeBoxText
+{
+    font-size: var(--fs-lg);
+    grid-row: 10 / span 2;
+    grid-column: 5 / span 11;
+    text-align: center;
+}
+#WelcomeBoxButton
+{
+    font-size: var(--fs-lg);
+    grid-row: 12 / span 2;
+    grid-column: 8 / span 5;
+    text-align: center;
+}
+#WelcomeBoxButton:hover
+{
+    transform: skewX(-15deg) scale(110%);
+    background-color: #992222;
+    transition-duration: 0.25s;
+}
+#RatingExplanationBox
+{
+    background: linear-gradient(180deg, #bbbbbb, #bb2222);
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: ghostwhite;
+}
+#ExplanationBoxHeader
+{
+    font-size: var(--fs-xxxl);
+    grid-row: 5 / span 3;
+    grid-column: 6 / span 10;
+}
+#ExplanationBoxText
+{
+    font-size: var(--fs-lg);
+    grid-row: 10 / span 2;
+    grid-column: 4 / span 13;
+    text-align: center;
+}
+#ImportRatingBox
+{
+    background: linear-gradient(180deg, #bb2222, #222222);
+    color: ghostwhite;
+}
+#ImportBoxHeader
+{
+    font-size: var(--fs-xxxl);
+    grid-row: 5 / span 3;
+    grid-column: 6 / span 10;
+}
+#ImportBoxText
+{
+    font-size: var(--fs-lg);
+    grid-row: 10 / span 2;
+    grid-column: 4 / span 12;
+    text-align: center;
+}
+#ImportBoxButton
+{
+    font-size: var(--fs-lg);
+    grid-row: 12 / span 2;
+    grid-column: 8 / span 5;
+    text-align: center;
+}
+#ImportBoxButton:hover
+{
+    transform: skewX(-15deg) scale(110%);
+    background-color: #992222;
+    transition-duration: 0.25s;
+}
+#Footer
+{
+    grid-row: 17 / span 4;
+    grid-column: 1 / span 20;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: repeat(10, 10%);
+    place-items: center;
+}
+a.footerHomeLink
+{
+    color: white;
+    text-decoration-line: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+a.footerHomeLink:link
+{
+    color: white;
+    text-decoration-line: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a.footerHomeLink:visited
+{
+    color: white;
+    text-decoration-line: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#TopLink
+{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+}
+#footerCopyright
+{
+    color: white;
+    grid-row: 3 / span 1;
+    grid-column: 9 / span 2;=
+}
+#YoutubeChannel
+{
+    background-image: url("../Images/YouTube Logo.jpg");
+    grid-row: 2 / span 3;
+    grid-column: 3 / span 1;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 25%;
+}
+#LinkedIn
+{
+    background-image: url("../Images/LinkedIn Logo.jpg");
+    grid-row: 2 / span 3;
+    grid-column: 5 / span 1;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 25%;
+}
+#YoutubeWebsite
+{
+    background-image: url("../Images/ChannelLogo.png");
+    grid-row: 2 / span 3;
+    grid-column: 7 / span 1;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 25%;
+    filter: brightness(300%);
+}
+#YoutubeChannel:hover, #LinkedIn:hover, #YoutubeWebsite:hover
+{
+    transition-duration: 0.25s;
+    transform: skewX(-15deg) scale(110%);
+    border-color: #bbbbbb;
+}
+
+/*portrait screen overrides*/
+@Media (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*ipad landscape screen overrides*/
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape)
+{
+    /*unused*/
+}
+
+/*ipad portrait screen overrides*/
+@media (min-height: 1024px) and (max-height: 1366px) and (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*smaller than ipad landscape screen overrides*/
+@media (max-width: 1023px) and (orientation: landscape)
+{
+    /*unused*/
+}
+
+/*smaller than ipad portrait screen overrides*/
+@media (max-height: 1023px) and (orientation: portrait)
+{
+    /*unused*/
+}
+
+/*safari browser overrides in portrait orientation*/
+@media (orientation: portrait)
+{
+    @supports (-webkit-touch-callout: none)
+    {
+        /*unused*/
+    }
+}
+
+/*safari browser overrides in landscape orientation*/
+@media (orientation: landscape)
+{
+    @supports (-webkit-touch-callout: none)
+    {
+        /*unused*/
+    }
+}

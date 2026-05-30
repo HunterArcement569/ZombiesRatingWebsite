@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Zombies Ratings</title>
+        <link rel="stylesheet" href="../StaticFiles/Css/RatingPageStyles.css">
+        <link rel="stylesheet" href="../StaticFiles/Css/Scale.css">
+        <script type="module" src="../StaticFiles/Js/RatingPageLogic.js"></script>
+    </head>
+
+
+    <body class="Scrollable" id="RatingPageBody">
+        <div class="Box" id="RatingNavbar" role="navigation">
+            <h1 id="RatingNavHeader">Zombies Ratings</h1>
+            <button class="NavButton" id="BackToHomeBtn" onclick="window.location.href='../index.html'">Home</button>
+            <button class="NavButton" id="ExportRatingBtn" style="display:none;">Export Rating</button>
+            <button class="NavButton" id="ImportRatingBtn" style="display:none;">Import Rating</button>
+        </div>
+
+        <div class="Box" id="RatingMainContainer">
+            <div id="DynamicContent"></div>
+        </div>
+
+          <footer id="RatingFooter" role="group">
+                <a href="#RatingPageBody" onclick="document.getElementById('RatingMainContainer').scrollTo({ top: 0, behavior: 'smooth' }); return false;"
+                    class="footerHomeLink" id="TopLink">
+                     Return to the Top of the Page
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCbKlNm4xa34uEjZrPKJBRsQ"
+                    target="_blank" class="footerHomeLink footer-logo-link" id="YoutubeChannel"></a>
+                <a href="https://www.linkedin.com/in/hunter-arcement-a67104280"
+                    target="_blank"  class="footerHomeLink footer-logo-link" id="LinkedIn"></a>
+                <a href="https://hunterarcement569.github.io/GameHacker569_Website/"
+                    target="_blank" class="footerHomeLink footer-logo-link" id="YoutubeWebsite"></a>
+
+                <p id="footerCopyright">Copyright &#169; 2026 Hunter J. Arcement</p>
+          </footer>
+    </body>
+
+</html>

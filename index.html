@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Zombies Ratings</title>
+        <link rel="stylesheet" href="StaticFiles/Css/HomePageStyles.css">
+        <link rel="stylesheet" href="StaticFiles/Css/Scale.css">
+        <script src="StaticFiles/Js/HomePageLogic.js"></script>
+    </head>
+
+    <body class="Scrollable" role="document" id="PageTop">
+
+        <div class="Box" id="WelcomeBox" role="group">
+            <nav id="Navbar" role="navigation">
+                <h1 id="NavHeader">Zombies Ratings</h1>
+                <button class="NavButton" id="CreateRatingBtn" onclick="CreateRating()">Create Rating</button>
+                <button class="NavButton" id="EditRatingBtn" onclick="EditRating()">Edit Rating</button>
+                <button class="NavButton" id="ViewRatingBtn" onclick="ViewRating()">View Rating</button>
+            </nav>
+
+            <h3 id="WelcomeBoxHeader">Zombies Rating Re-Imagined</h3>
+            <p id="WelcomeBoxText">
+                Introducing a new rating system that takes into account the foundational game mechanics each map is built on.
+            </p>
+            <button id="WelcomeBoxButton" onclick="CreateRating()">Get Started &rarr;</button>
+        </div>
+
+        <div class="Box" id="RatingExplanationBox" role="group">
+            <h3 id="ExplanationBoxHeader">The Rating System</h3>
+            <p id="ExplanationBoxText">
+                Call of Duty Zombies has over <b>70</b> zombies maps, and not all of them are equal.
+                The foundation of every map is the game engine and mechanics, from old-school 4 perk limits, to differing point systems,
+                from modern health systems, to graphic styling. The game a map is on plays a pivotal role in how well or poorly
+                that map is viewed by a player. Imagine your favorite zombies map, now put that map on your least favorite game
+                of the series. Does that map still hold up, or do the mechanics drop the map's rating a tier or two? This new
+                rating system uses the map rating as a 0-to-1 multiplier against the individual map ratings to come up with a
+                final rating.
+            </p>
+        </div>
+
+        <div class="Box" id="ImportRatingBox" role="group">
+            <h3 id="ImportBoxHeader">Share your Ratings!</h3>
+            <p id="ImportBoxText">
+                With this website, you can save your ratings, edit them later when new maps are added, and share to your
+                zombie-slaying comrades what you believe is the best zombies map of all time is.
+            </p>
+            <button id="ImportBoxButton" onclick="ViewRating()">Import a Rating &rarr;</button>
+
+            <footer id="Footer" role="group">
+                <a href="#PageTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
+                   class="footerHomeLink" id="TopLink">
+                    Return to the Top of the Page
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCbKlNm4xa34uEjZrPKJBRsQ"
+                   target="_blank" class="footerHomeLink" id="YoutubeChannel"></a>
+                <a href="https://www.linkedin.com/in/hunter-arcement-a67104280"
+                   target="_blank"  class="footerHomeLink" id="LinkedIn"></a>
+                <a href="https://hunterarcement569.github.io/GameHacker569_Website/"
+                   target="_blank" class="footerHomeLink" id="YoutubeWebsite"></a>
+
+                <p id="footerCopyright">Copyright &#169; 2026 Hunter J. Arcement</p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>
