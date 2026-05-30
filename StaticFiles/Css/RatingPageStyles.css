@@ -104,7 +104,6 @@
     gap: var(--sp-lg);
     margin-top: var(--sp-lg);
 }
-
 .included-count-info
 {
     width: 100%;
@@ -117,21 +116,18 @@
     margin-bottom: var(--sp-md);
     font-size: var(--fs-sm);
 }
-
 .step-header
 {
     font-size: var(--fs-xl);
     color: #222;
     margin-bottom: var(--sp-md);
 }
-
 .inline-error
 {
     color: #bb2222;
     font-weight: bold;
     margin-top: var(--sp-md);
 }
-
 .rating-action-row
 {
     display: flex;
@@ -142,7 +138,6 @@
     margin-top: var(--sp-xl);
     margin-bottom: var(--sp-xl);
 }
-
 .primary-action
 {
     background: #bb2222;
@@ -153,13 +148,11 @@
     cursor: pointer;
     transition: background 0.25s, transform 0.25s;
 }
-
 .primary-action:hover
 {
     background: #992222;
     transform: skewX(-15deg) scale(110%);
 }
-
 .secondary-action
 {
     background: #222;
@@ -170,13 +163,11 @@
     cursor: pointer;
     transition: background 0.25s, transform 0.25s;
 }
-
 .secondary-action:hover
 {
     background: #444;
     transform: skewX(-10deg) scale(105%);
 }
-
 .tier-section
 {
     border: 3px solid #222;
@@ -184,7 +175,6 @@
     overflow: hidden;
     background: white;
 }
-
 .tier-header
 {
     display: flex;
@@ -196,27 +186,23 @@
     color: white;
     background: #222;
 }
-
 .tier-label
 {
     min-width: 4rem;
     text-align: center;
     font-size: var(--fs-xxl);
 }
-
 .tier-count
 {
     font-size: var(--fs-sm);
     opacity: 0.85;
 }
-
 .tier-items
 {
     display: grid;
     gap: var(--sp-sm);
     padding: var(--sp-md);
 }
-
 .tier-item
 {
     display: grid;
@@ -228,13 +214,11 @@
     background: #f3f3f3;
     border-left: 5px solid #bb2222;
 }
-
 .tier-score
 {
     font-weight: bold;
     font-size: var(--fs-md);
 }
-
 .tier-S .tier-header { background: #064e3b; }
 .tier-A .tier-header { background: #14532d; }
 .tier-B .tier-header { background: #166534; }
@@ -242,7 +226,6 @@
 .tier-D .tier-header { background: #92400e; }
 .tier-F .tier-header { background: #450a0a; }
 .tier-Unrated .tier-header { background: #1f2937; }
-
 .form-column,
 .rating-card,
 .rating-field-list,
@@ -252,7 +235,6 @@
     flex-direction: column;
     gap: var(--sp-sm);
 }
-
 .rating-card label,
 .form-column label,
 .game-selection-list label
@@ -263,39 +245,68 @@
     gap: var(--sp-xs);
     width: 100%;
 }
-
 .rating-card input,
 .form-column input
 {
     width: 100%;
     max-width: 20rem;
 }
-
-.game-selection-row,
 .checkbox-row
 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: var(--sp-sm);
+    column-gap: var(--sp-sm);
     width: 100%;
     line-height: 1.3;
 }
+.game-selection-row
+{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: var(--sp-md);
+    width: 100%;
+    padding: var(--sp-sm) var(--sp-md);
+    border-radius: var(--rd-sm);
+    background: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.game-selection-row:hover
+{
+    background: #e7e7e7;
+}
+.game-selection-row input[type="checkbox"]
+{
+    margin: 0;
 
-.game-selection-row input[type="checkbox"],
+    width: 1.2rem;
+    height: 1.2rem;
+
+    flex-shrink: 0;
+
+    transform: scale(1.15);
+}
 .checkbox-row input[type="checkbox"]
 {
     margin: 0;
-    flex: 0 0 auto;
+    justify-self: center;
+    align-self: center;
     transform: scale(1.15);
 }
-
-.game-selection-row span,
-.checkbox-row span
+.game-selection-row span
 {
-    display: inline-block;
-}
+    flex: 1;
 
+    display: flex;
+
+    align-items: center;
+
+    min-height: 1.5rem;
+
+    font-size: var(--fs-md);
+}
 .results-action-row
 {
     display: flex;
@@ -305,7 +316,6 @@
     margin: var(--sp-lg) auto;
     width: 100%;
 }
-
 .results-action-row button,
 .page-action-button
 {
@@ -319,15 +329,14 @@
     cursor: pointer;
     transition: background-color 0.25s, transform 0.25s;
 }
-
 .results-action-row button:hover,
 .page-action-button:hover
 {
     background-color: #992222;
     transform: skewX(-15deg) scale(110%);
 }
-
-#RatingFooter {
+#RatingFooter
+{
     width: 100%;
     background-color: black;
     color: white;
@@ -355,8 +364,6 @@ a.footerHomeLink:hover
     color: #bb2222;
     transform: skewX(-15deg) scale(110%);
 }
-
-
 .footer-logo-link
 {
     width: 3rem;
@@ -367,12 +374,10 @@ a.footerHomeLink:hover
     border: 2px solid white;
     border-radius: 25%;
 }
-
 #YoutubeChannel
 {
     background-image: url("../Images/YouTube Logo.jpg");
 }
-
 #LinkedIn
 {
     background-image: url("../Images/LinkedIn Logo.jpg");
@@ -383,7 +388,6 @@ a.footerHomeLink:hover
     background-image: url("../Images/ChannelLogo.png");
     filter: brightness(300%);
 }
-
 #YoutubeChannel:hover,
 #LinkedIn:hover,
 #YoutubeWebsite:hover

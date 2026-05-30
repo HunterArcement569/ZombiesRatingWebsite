@@ -22,6 +22,20 @@ const appState = {
     lastImportedRaw: null
 };
 
+function resetRatingScroll() {
+    const main = document.getElementById("RatingMainContainer");
+
+    if (main) {
+        main.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        });
+    }
+
+    window.scrollTo(0, 0);
+}
+
 function getModeFromQuery() {
     const params = new URLSearchParams(window.location.search);
     const modeToken = params.get("Function");
@@ -106,11 +120,22 @@ function createStepHeader(text) {
 }
 
 function renderIncludedCountInfo(container) {
-    const { games, maps } = applyFilters(appState.ratingData);
     const info = document.createElement("div");
     info.className = "included-count-info";
-    info.textContent = `This rating includes ${games.length} games and ${maps.length} maps.`;
+    info.id = "IncludedCountInfo";
+
     container.appendChild(info);
+    updateIncludedCountInfo();
+
+    return info;
+}
+
+function updateIncludedCountInfo() {
+    const info = document.getElementById("IncludedCountInfo");
+    if (!info) return;
+
+    const { games, maps } = applyFilters(appState.ratingData);
+    info.textContent = `This rating includes ${games.length} games and ${maps.length} maps.`;
 }
 
 function createActionRow(buttons) {
@@ -223,13 +248,16 @@ function renderSetupScreen() {
         checkbox.value = game.id;
         checkbox.addEventListener("change", () => {
             const current = new Set(appState.ratingData.selectedGameIds || []);
+
             if (checkbox.checked) {
                 current.add(game.id);
             } else {
                 current.delete(game.id);
             }
+
             appState.ratingData.selectedGameIds = Array.from(current);
             updateLastEdited();
+            updateIncludedCountInfo();
         });
 
         const text = document.createElement("span");
@@ -680,28 +708,26 @@ function renderEditPrompt() {
     container.appendChild(message);
 }
 
-function renderCurrentState() {
-    if (appState.mode === MODES.VIEW) {
-        renderResults();
-        return;
-    }
-
-    if (appState.state === STATES.SETUP) {
+function renderCurrentState()
+{
+    if (appState.state === STATES.SETUP)
+    {
         renderSetupScreen();
-        return;
     }
-
-    if (appState.state === STATES.RATE_GAMES) {
+    else if (appState.state === STATES.RATE_GAMES)
+    {
         renderGameRatings();
-        return;
     }
-
-    if (appState.state === STATES.RATE_MAPS) {
+    else if (appState.state === STATES.RATE_MAPS)
+    {
         renderMapRatings();
-        return;
+    }
+    else if (appState.state === STATES.RESULTS)
+    {
+        renderResults();
     }
 
-    renderResults();
+    requestAnimationFrame(resetRatingScroll);
 }
 
 function initCreateMode() {
